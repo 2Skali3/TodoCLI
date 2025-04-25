@@ -15,4 +15,12 @@ class Task_Impl implements Task{
         this.tasks.add(message);
     }
 
+
+    @Override
+    public void RemoveTask(int index) {
+
+        this.tasks.remove(index - 1);
+
+    }
+
 }
