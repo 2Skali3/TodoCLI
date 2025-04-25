@@ -1,6 +1,6 @@
-package main.java.todocli;
+package todocli;
 
-public class Task {
+public interface Task {
     
-
+    void AddTask(String message);
 }
