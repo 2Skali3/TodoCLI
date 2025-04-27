@@ -22,4 +22,15 @@ class Task_Impl implements Task{
 
     }
 
+    @Override
+    public void PrintTasks() {
+    
+        for(final String task : this.tasks){
+            System.out.println(task);
+        }
+    
+    }
+
+    
+
 }

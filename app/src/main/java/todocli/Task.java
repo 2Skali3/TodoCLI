@@ -6,4 +6,5 @@ public interface Task {
 
     void RemoveTask(int index);
 
+    void PrintTasks();
 }
