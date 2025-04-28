@@ -31,6 +31,4 @@ class Task_Impl implements Task{
     
     }
 
-    
-
 }

@@ -10,5 +10,11 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+        final UserInputs usrInp = new UserInputs();
+
+        System.out.println("say hello for me");
+        System.out.print(">>");
+
+        usrInp.askUserAction();
     }
 }
