@@ -9,12 +9,14 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-        final UserInputs usrInp = new UserInputs();
+        
+        final Task_Impl ti = new Task_Impl();
+        final UserInputs usrInp = new UserInputs(ti);
 
-        System.out.println("say hello for me");
-        System.out.print(">>");
 
         usrInp.askUserAction();
-    }
+ 
+
+
+   }
 }

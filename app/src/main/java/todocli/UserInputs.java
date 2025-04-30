@@ -3,21 +3,43 @@ package todocli;
 import java.util.Scanner;
 
 public class UserInputs {
+    
+    final Scanner sc = new Scanner(System.in);
+    Task_Impl ti;
 
-    Scanner sc = new Scanner(System.in);
+    public UserInputs(final Task_Impl ti){
+        this.ti = ti;
+    }
 
-    void askUserAction(){
+    public void askUserAction(){
 
-        final String UserInput = sc.nextLine();
+        String UserInput;
 
-        switch (UserInput) {
-            case "hi":
-                System.out.println("I had nothing to print for now");
+        while(true){
+            
+            System.out.println("What do you want to do? (type help for a list of all commands)");
+            System.out.print(">> ");
 
-                break;
+            UserInput = sc.nextLine();
+
+            switch (UserInput) {
+                case "add":
+                    System.out.println("what task do you want to add?");
+                    this.ti.AddTask(sc.nextLine());
+                    break;
+            
+                case "print":
+                    System.out.println(ti.getTasks());
+                    break;
+                
+                case "exit":
+                    return;
         
-            default:
-                System.out.println("something did non work :)");
+                default:
+                    System.out.println("something did non work :)");
+            }
         }
+
+
     }
 }
