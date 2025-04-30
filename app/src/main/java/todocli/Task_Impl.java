@@ -7,7 +7,6 @@ class Task_Impl implements Task{
     
    private final List<String> tasks = new ArrayList<>();
     
-
     @Override
     public void AddTask(String message) {
 
@@ -19,16 +18,12 @@ class Task_Impl implements Task{
     public void RemoveTask(int index) {
 
         this.tasks.remove(index - 1);
-
     }
 
     @Override
-    public void PrintTasks() {
+    public List<String> getTasks() {
     
-        for(final String task : this.tasks){
-            System.out.println(task);
-        }
-    
+        return this.tasks;
     }
 
 }

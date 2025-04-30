@@ -24,7 +24,7 @@ public class Tests {
         tasks.AddTask("BBB");
         tasks.AddTask("CCC");
         
-        tasks.PrintTasks();
+        System.out.println(tasks.getTasks());
 
     }
 
